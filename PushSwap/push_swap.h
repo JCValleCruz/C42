@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/29 19:36:08 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/07/30 13:48:58 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ void		ft_setpos(t_list **lst);
 void		ft_putindex (t_list **a, int *tab, int size);
 void		ft_setindex(t_list **a);
 int 		*ft_sort_int_tab(int *tab, int size);
+//Sort Three
+void	ft_sort_three(t_list **a);
+t_list		*ft_max(t_list	**a);
+t_list		*ft_min(t_list	**a);
+//Moves
+
 
 
 
