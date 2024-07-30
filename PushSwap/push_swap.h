@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/30 13:48:58 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/07/30 19:52:36 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ void	ft_sort_three(t_list **a);
 t_list		*ft_max(t_list	**a);
 t_list		*ft_min(t_list	**a);
 //Moves
+void	ft_moveswap (t_list **lst);
+t_list	*ft_lastnode(t_list **lst);
+t_list	*ft_secondlast(t_list **lst);
+void	ft_rotate(t_list **lst);
+void	ft_revrotate (t_list **lst);
+
+
+
 
 
 
