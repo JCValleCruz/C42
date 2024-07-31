@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/30 19:52:36 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/07/31 12:49:52 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ typedef struct s_list								//asi definimos la estructura del nodo.
 	int					value;
 	int					pos;
 	int					index;
+	int					target;
+	int					costa;
+	int					costb;
 	struct s_list		*next;
 } t_list;
 
@@ -32,7 +35,7 @@ t_list		*ft_lstnew(int value);
 int			ft_lstsize(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 //print utils (BORRAR!!!)
-void		ft_printlist (t_list **lst, char c);
+void		ft_printlist (t_list **lst, char *c);
 //libft utils
 int			ft_atoi(const char *str);
 //Posición
@@ -51,6 +54,8 @@ t_list	*ft_lastnode(t_list **lst);
 t_list	*ft_secondlast(t_list **lst);
 void	ft_rotate(t_list **lst);
 void	ft_revrotate (t_list **lst);
+//Push
+void	ft_push(t_list **src, t_list **dst);
 
 
 
