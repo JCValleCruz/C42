@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:22:36 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 12:31:25 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/07/31 14:27:38 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,25 @@
 
 void	ft_firstmove(t_list **a, t_list **b)
 {
-	ft_setpos(a);
-	
+	int size;
+	int half;
+	t_list *aux;
+	aux = *a;
+	size = ft_lstsize(aux);
+	half = size / 2;
+	while ((size > 3) && (half < size))
+	{
+		if (aux->index <= half)
+		{
+			ft_push(a, b);
+			size--;
+		}	
+		else 
+			ft_rotate(a);
+	}
+	while (size > 3)
+	{
+		ft_push(a, b);
+		size--;
+	}		
 }

@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 12:49:52 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/07/31 13:44:29 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	ft_rotate(t_list **lst);
 void	ft_revrotate (t_list **lst);
 //Push
 void	ft_push(t_list **src, t_list **dst);
+//First Move
+void	ft_firstmove(t_list **a, t_list **b);
 
 
 
