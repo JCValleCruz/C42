@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:22:36 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 15:49:03 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:40:26 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,23 @@ void	ft_firstmove(t_list **a, t_list **b)
 	half = size / 2;
 	i = 1;
 
-	// Mover la mitad inferior de los elementos al stack b
 	while (i <= half)
 	{
-		aux = *a; // Actualizamos el puntero aux para que apunte al primer elemento actual
+		aux = *a; 
 		if (aux->index <= half)
 		{
-			ft_push(a, b); // Mueve el elemento actual de a a b
+			ft_push(a, b); 
 			i++;
 		}
 		else 
 		{
-			ft_rotate(a); // Rota el stack a
+			ft_rotate(a); 
 		}
 	}
 
-	// Mover el resto de los elementos indiscriminadamente, dejando solo 3 en a
 	while (ft_lstsize(*a) > 3)
 	{
 		ft_push(a, b);
+		size--;
 	}
 }
