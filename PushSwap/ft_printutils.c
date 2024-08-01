@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:37:50 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 12:49:32 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/01 12:52:58 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_printlist (t_list **lst, char *c)
 	printf("\033[;36m\nCadena: %s\n\n",c);
 	while (aux)
 	{
-		printf("\033[;31m Value: %i \033[0m \t \033[;33m Pos: %i \033[0m \t \033[;36mIndex: %i \t Target: %i \t Coste A: %i \t Coste B: %i\n", aux->value, aux->pos, aux->index, aux->target, aux->costa, aux->costb);
+		printf("\033[;31m Value: %i \033[0m \t \033[;33m Pos: %i \033[0m \t \033[;36mIndex: %i \t \033[;37mTarget: %i \t \033[;38mCoste A: %i \t Coste B: %i\n", aux->value, aux->pos, aux->index, aux->target, aux->costa, aux->costb);
 		aux = aux->next;
 	}
 	printf("%c",'\n');

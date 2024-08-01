@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_firstmove.c                                     :+:      :+:    :+:   */
+/*   perform_moves.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 12:22:36 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/01 14:43:21 by jvalle-d         ###   ########.fr       */
+/*   Created: 2024/08/01 14:56:39 by jvalle-d          #+#    #+#             */
+/*   Updated: 2024/08/01 15:00:09 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.h"					//Pdte.
 
-void	ft_firstmove(t_list **a, t_list **b)
+
+void perform_moves(t_list **b)
 {
-	int size;
-	int half;
-	t_list *aux;
-	aux = *a;
-	size = ft_lstsize(*a);
-	half = size / 2;
-	if(size % 2 != 0)
-		half++;
-	while ((size > 3) && (half < size))
-	{
-		if ((*a)->index < half)
-		{
-			ft_push(a, b);
-			size--;
-		}	
-		else 
-			ft_rotate(a);
-	}
-	while (size > 3)
-	{
-		ft_push(a, b);
-		size--;
-	}		
+	t_list *cheap;
+	cheap = ft_find_cheapest(&b);
+	if(cheap->costa < 0 && cheap->costb < 0)
+		perform_reverse(&b);
+	else if (cheap->costa > 0 && cheap->costb > 0)
+		perform_rotates(&b);
+	else
+		perform_mix(&b);
 }

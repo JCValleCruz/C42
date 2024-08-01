@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:32:33 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/30 13:47:29 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/01 14:54:10 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ void	ft_sort_three(t_list **a)
 
 	if (max->pos == 2)
 	{
-		//rra
+		rra(a);
 		ft_setpos(a);						//actualiza su posicion despues del cambio
 	}
 	else if (max->pos == 1)
 	{
-		//ra
+		ra(a);
 		ft_setpos(a);						//actualiza su posicion despues del cambio
 	}
 	if (min->pos == 2)
 	{
-		//sa
+		sa(a);
 		ft_setpos(a);						//actualiza su posicion despues del cambio
 	}
 }

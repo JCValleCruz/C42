@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 13:44:29 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/01 14:53:46 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,24 +45,34 @@ void		ft_putindex (t_list **a, int *tab, int size);
 void		ft_setindex(t_list **a);
 int 		*ft_sort_int_tab(int *tab, int size);
 //Sort Three
-void	ft_sort_three(t_list **a);
+void		ft_sort_three(t_list **a);
 t_list		*ft_max(t_list	**a);
 t_list		*ft_min(t_list	**a);
 //Moves
-void	ft_moveswap (t_list **lst);
-t_list	*ft_lastnode(t_list **lst);
-t_list	*ft_secondlast(t_list **lst);
-void	ft_rotate(t_list **lst);
-void	ft_revrotate (t_list **lst);
+void		ft_moveswap (t_list **lst);
+t_list		*ft_lastnode(t_list **lst);
+t_list		*ft_secondlast(t_list **lst);
+void		ft_rotate(t_list **lst);
+void		ft_revrotate (t_list **lst);
 //Push
-void	ft_push(t_list **src, t_list **dst);
+void		ft_push(t_list **src, t_list **dst);
 //First Move
-void	ft_firstmove(t_list **a, t_list **b);
-
-
-
-
-
+void		ft_firstmove(t_list **a, t_list **b);
+//Targets
+void		ft_target(t_list **a, t_list **b, int size);
+void		ft_settarget(t_list **a, t_list *nodob, int size);
+void		ft_settargetnext(t_list **a,t_list *nodob, int size);
+//Costes
+void		ft_costa(t_list **a, t_list **b);
+void		ft_costb(t_list	**b);
+//print_moves
+void	rrr(t_list **a, t_list **b);
+void	rrb(t_list **b);
+void	rra(t_list **a);
+void	sa(t_list **a);
+void	rr(t_list **a, t_list ** b);
+void	rb(t_list **b);
+void	ra(t_list **a);
 
 
 #endif

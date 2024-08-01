@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 19:01:33 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/29 19:38:01 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/01 13:08:15 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ int 	*ft_sort_int_tab(int *tab, int size)
 	}
 	return (tab);
 }
-
 void	ft_putindex (t_list **a, int *tab, int size)
 {
 	t_list 	*aux;
@@ -75,4 +74,3 @@ void	ft_putindex (t_list **a, int *tab, int size)
 		aux = aux->next;
 	}
 }
-

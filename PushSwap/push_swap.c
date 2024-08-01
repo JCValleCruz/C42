@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:17:12 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 14:22:52 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/01 14:55:32 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main (int argc, char **argv)
 	t_list	*a;
 	t_list 	*b;
 	t_list 	*nodo;
+	int 	size;
 	int 	i;
 	 
 	a = NULL;
@@ -27,7 +28,6 @@ int main (int argc, char **argv)
 		nodo = ft_lstnew(ft_atoi(argv[i++]));
 		ft_lstadd_back(&a,nodo);
 	}
-	
 	/* t_list *try;				//Prueba Push
 	try = ft_lstnew(10);		//Prueba Push
 	ft_lstadd_back(&b,try);		//Prueba Push	 */
@@ -43,9 +43,22 @@ int main (int argc, char **argv)
 	ft_printlist(&a,"A Rotate");
 	ft_revrotate(&a);
 	ft_printlist(&a,"A Inverse Rotate"); */
+	size = ft_lstsize(a);
 	ft_setindex(&a);
 	ft_setpos(&a);
 	ft_firstmove(&a,&b);
+	ft_setpos(&a);
 	ft_printlist(&a,"A");
-	ft_printlist(&b,"B");
+	ft_sort_three(&a);
+	while(b)
+	{
+		ft_setpos(&a);
+		ft_setpos(&b);
+		ft_target(&a,&b,size);
+		ft_costa(&a,&b);
+		ft_costb(&b);
+		perform_moves(&b);
+		ft_printlist(&a,"A");
+		ft_printlist(&b,"B");
+	}
 }
