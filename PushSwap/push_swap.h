@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 19:54:20 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 20:16:19 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_list								//asi definimos la estructura del nodo.
 } t_list;
 
 //lst utils
-t_list		*ft_lstnew(int value);
+t_list		*ft_lstnew(long long value);
 int			ft_lstsize(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 //print utils (BORRAR!!!)
@@ -85,5 +85,7 @@ void 	ft_perform_moves(t_list **a, t_list **b);
 int		ft_abs(int value);
 t_list	*ft_find_cheapest(t_list **lst);
 void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap);
+//CheckDoubles
+int	ft_check_doubles(t_list **lst);
 
 #endif

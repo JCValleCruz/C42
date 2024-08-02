@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:17:12 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 19:56:09 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 20:15:00 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,13 @@ int main (int argc, char **argv)
 		}
 		ft_lstadd_back(&a,nodo);
 	}
-	ft_check_doubles(&a); //hacer!!!!!!!!!!!!!!!
+	if (ft_check_doubles(&a) == 0)
+	{
+			write(STDERR_FILENO, "Error\n", 6);
+			exit (1);
+	}
+	
+	 //hacer!!!!!!!!!!!!!!!
 	/* t_list *try;				//Prueba Push
 	try = ft_lstnew(10);		//Prueba Push
 	ft_lstadd_back(&b,try);		//Prueba Push	 */

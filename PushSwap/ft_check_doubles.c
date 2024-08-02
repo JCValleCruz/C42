@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_check_doubles.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/17 13:59:29 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 20:16:39 by jvalle-d         ###   ########.fr       */
+/*   Created: 2024/08/02 20:00:36 by jvalle-d          #+#    #+#             */
+/*   Updated: 2024/08/02 20:11:34 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long long	ft_atoll(const char *str)
+int	ft_check_doubles(t_list **lst)
 {
-	long long	result;
-	int	sign;
-
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-' || *str == '+')
+	t_list	*aux;
+	t_list	*temp;
+	aux = *lst;
+	
+	while (aux->next != NULL)
 	{
-		if (*str == '-')
-			sign = -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		if(*str < '0' || *str > '9')
+		temp = aux->next;
+		while (temp)
 		{
-			write(STDERR_FILENO, "Error\n", 6);
-			exit (1);
+			if (aux->value == temp->value)
+				return (0);
+			temp = temp->next;
 		}
-		result = result * 10 + (*str - '0');
-		str++;
+		aux = aux->next;
 	}
-	return (result * sign);
+	return (1);
 }
