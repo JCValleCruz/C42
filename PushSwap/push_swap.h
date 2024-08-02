@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/01 14:53:46 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 14:01:11 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,16 @@ void	sa(t_list **a);
 void	rr(t_list **a, t_list ** b);
 void	rb(t_list **b);
 void	ra(t_list **a);
+void	pa(t_list **src, t_list **dst);
+void	pb(t_list **src, t_list **dst);
 
+
+
+void	ft_perform_rotates(t_list **a, t_list **b, t_list *cheap);
+void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap);
+void 	ft_perform_moves(t_list **a, t_list **b);
+int		ft_abs(int value);
+t_list	*ft_find_cheapest(t_list **lst);
+void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap);
 
 #endif

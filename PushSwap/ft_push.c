@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 10:49:53 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/31 11:30:17 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 13:24:38 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,16 @@ void	ft_push(t_list **src, t_list **dst)
 	*dst = *src;
 	*src = aux;
 }
+
+void	pa(t_list **src, t_list **dst)
+{
+	ft_push(src,dst);
+	write(1,"pa\n",3);
+}
+void	pb(t_list **src, t_list **dst)
+{
+	ft_push(src,dst);
+	write(1,"pb\n",3);
+}
+
 

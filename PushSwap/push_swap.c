@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:17:12 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/01 14:55:32 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 14:04:21 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,24 @@ int main (int argc, char **argv)
 	ft_setpos(&a);
 	ft_firstmove(&a,&b);
 	ft_setpos(&a);
-	ft_printlist(&a,"A");
 	ft_sort_three(&a);
-	while(b)
+	ft_setpos(&a);
+	ft_setpos(&b);
+	ft_target(&a,&b,size);
+	ft_costa(&a,&b);
+	ft_costb(&b);
+	ft_printlist(&a,"A");
+	ft_printlist(&b,"B");
+	
+	 while(b)
 	{
 		ft_setpos(&a);
 		ft_setpos(&b);
 		ft_target(&a,&b,size);
 		ft_costa(&a,&b);
 		ft_costb(&b);
-		perform_moves(&b);
+		ft_perform_moves(&a,&b);
 		ft_printlist(&a,"A");
 		ft_printlist(&b,"B");
-	}
+	} 
 }
