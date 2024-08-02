@@ -6,13 +6,13 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:10:41 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/29 18:29:28 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:53:22 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_lstnew(int value)
+t_list	*ft_lstnew(long long value)
 {
 	t_list	*nodo;
 

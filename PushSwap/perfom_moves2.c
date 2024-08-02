@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:02:32 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 14:02:10 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:30:51 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,12 @@ void	ft_perform_rotates(t_list **a, t_list **b, t_list *cheap)
 	}
 	pa(b,a);
 }
-
-void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap)
+/* void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap)
 {
 	int timesa;
 	int timesb;
 	
-	timesa = ft_abs((*b)->costa);
+	timesa = ft_abs((*b)->costa); 
 	timesb = ft_abs((*b)->costb);
 	while (timesa != 0 && timesb != 0)
 	{
@@ -63,7 +62,34 @@ void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap)
 		timesb--;
 	}
 	pa(b,a);
+} */
+
+void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap)
+{
+	int timesa;
+	int timesb;
+	
+	timesa = ft_abs(cheap->costa); 
+	timesb = ft_abs(cheap->costb);
+	while (timesa != 0 && timesb != 0)
+	{
+		rrr(a,b);
+		timesa--;
+		timesb--;	
+	}
+	while (timesa > 0)
+	{
+		rra(a);
+		timesa--;
+	}
+	while(timesb > 0)
+	{
+		rrb(b);
+		timesb--;
+	}
+	pa(b,a);
 }
+
 void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap)
 {
 	int timesa;
@@ -74,7 +100,7 @@ void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap)
 	while (timesa > 0)
 	{
 		ra(a);
-		timesa--;		
+		timesa--;	
 	}
 	while (timesa < 0)
 	{
@@ -93,5 +119,21 @@ void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap)
 	}
 	pa(b,a);
 }
-
+void	ft_ultimatemove (t_list	**lst)
+{
+	int times;
+	t_list	*min;
+	min = ft_min(lst);
+	times = min->costb;
+	while(times < 0)
+	{
+		rra(lst);
+		times++;
+	}
+	while(times > 0)
+	{
+		ra(lst);
+		times--;
+	}
+}
 

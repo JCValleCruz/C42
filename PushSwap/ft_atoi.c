@@ -6,15 +6,15 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 13:59:29 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/07/29 18:42:41 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:53:55 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
-	int	result;
+	long long	result;
 	int	sign;
 
 	result = 0;
@@ -29,6 +29,11 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
+		if(*str < '0' || *str > '9')
+		{
+			write(STDERR_FILENO, "Error\n", 6);
+			exit (1);
+		}
 		result = result * 10 + (*str - '0');
 		str++;
 	}

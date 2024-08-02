@@ -6,11 +6,11 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 14:56:39 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 13:53:21 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:45:06 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"					//Pdte.
+#include "push_swap.h"					
 
 void ft_perform_moves(t_list **a, t_list **b)
 {
@@ -42,20 +42,20 @@ t_list	*ft_find_cheapest(t_list **lst)
 	t_list 	*result;
 	
 	temp = *lst;
+	result = *lst;
 	cheap = ft_abs(temp->costa) + ft_abs(temp->costb);
 	while(temp)
 	{
 		acos = temp->costa;
 		bcos = temp->costb;
 		totalcost = ft_abs(acos) + ft_abs(bcos);
-		if (totalcost <= cheap)
+		if (totalcost < cheap)
 		{
 			cheap = totalcost;
 			result = temp;
 		}
 		temp = temp->next;		
 	}
-	//printf("\n\n%i",result->value);
 	return (result);
 }
 

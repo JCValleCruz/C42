@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 14:01:11 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:54:20 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@
 
 typedef struct s_list								//asi definimos la estructura del nodo.
 {
-	int					value;
-	int					pos;
-	int					index;
-	int					target;
-	int					costa;
-	int					costb;
-	struct s_list		*next;
+	long long				value;
+	int						pos;
+	int						index;
+	int						target;
+	int						costa;
+	int						costb;
+	struct s_list			*next;
 } t_list;
 
 //lst utils
@@ -36,8 +36,9 @@ int			ft_lstsize(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 //print utils (BORRAR!!!)
 void		ft_printlist (t_list **lst, char *c);
+void	ft_print_node(t_list *lst);
 //libft utils
-int			ft_atoi(const char *str);
+long long			ft_atoll(const char *str);
 //Posición
 void		ft_setpos(t_list **lst);
 //Index
@@ -77,7 +78,7 @@ void	pa(t_list **src, t_list **dst);
 void	pb(t_list **src, t_list **dst);
 
 
-
+void	ft_ultimatemove (t_list	**lst);
 void	ft_perform_rotates(t_list **a, t_list **b, t_list *cheap);
 void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap);
 void 	ft_perform_moves(t_list **a, t_list **b);

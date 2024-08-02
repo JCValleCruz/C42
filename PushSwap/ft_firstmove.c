@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:22:36 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 12:01:25 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/02 18:49:54 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ void	ft_firstmove(t_list **a, t_list **b)
 	{
 		if ((*a)->index <= half)
 		{
-			ft_push(a, b);
+			pb(a, b);
 			size--;
 		}	
 		else 
-			ft_rotate(a);
+			ra(a);
 	}
 	while (size > 3)
 	{
-		ft_push(a, b);
+		pb(a, b);
 		size--;
 	}		
 }
