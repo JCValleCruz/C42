@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_setpos.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/29 18:50:25 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/05 14:35:14 by jvalle-d         ###   ########.fr       */
+/*   Created: 2024/08/05 11:40:02 by jvalle-d          #+#    #+#             */
+/*   Updated: 2024/08/05 11:40:13 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_setpos(t_list **lst)
+size_t	ft_strlen(const char *str)
 {
-	int			i;
-	t_list		*aux;
+	size_t	c;
 
-	i = 1;
-	aux = *lst;
-	while (aux)
+	c = 0;
+	while (str[c] != '\0')
 	{
-		aux->pos = i++;
-		aux = aux->next;
+		c++;
 	}
+	return (c);
 }

@@ -6,15 +6,16 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:37:50 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 20:15:58 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:33:05 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_printlist (t_list **lst, char *c)
+void	ft_printlist(t_list **lst, char *c)
 {
 	t_list	*aux;
+
 	aux = *lst;
 	printf("\033[;36m\nCadena: %s\n\n",c);
 	while (aux)

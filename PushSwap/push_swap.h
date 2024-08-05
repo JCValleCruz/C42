@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 20:16:19 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:00:16 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,7 @@ void	rb(t_list **b);
 void	ra(t_list **a);
 void	pa(t_list **src, t_list **dst);
 void	pb(t_list **src, t_list **dst);
-
-
+//Check and Run Moves
 void	ft_ultimatemove (t_list	**lst);
 void	ft_perform_rotates(t_list **a, t_list **b, t_list *cheap);
 void	ft_perform_reverse(t_list **a, t_list **b, t_list *cheap);
@@ -86,6 +85,11 @@ int		ft_abs(int value);
 t_list	*ft_find_cheapest(t_list **lst);
 void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap);
 //CheckDoubles
-int	ft_check_doubles(t_list **lst);
+int		ft_check_doubles(t_list **lst);
+//Split Args
+char	**ft_split(const char *s, char c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+size_t	ft_strlen(const char *str);
+void	free_split(char **split);
 
 #endif

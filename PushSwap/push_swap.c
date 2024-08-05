@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:17:12 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 20:15:00 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:04:09 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,28 @@ int main (int argc, char **argv)
 	t_list 	*nodo;
 	int 	size;
 	int 	i;
+	char **split;
+	int arg_i;
 	 
 	a = NULL;
 	b = NULL;
-	i = 1;
-	while (i < argc)
-	{
-		nodo = ft_lstnew(ft_atoll(argv[i++]));
-		if(nodo->value > INT_MAX || nodo->value < INT_MIN)
-		{
-			write(STDERR_FILENO, "Error\n", 6);
-			exit (1);
+	arg_i = 1;
+	i = 0;
+	while (arg_i < argc)
+	{ 
+		split = ft_split(argv[arg_i++],' ');
+		while (split[i])
+		{		
+			nodo = ft_lstnew(ft_atoll(split[i++]));
+			if(nodo->value > INT_MAX || nodo->value < INT_MIN)
+			{
+				write(STDERR_FILENO, "Error\n", 6);
+				exit (1);
+			}
+			ft_lstadd_back(&a,nodo);
 		}
-		ft_lstadd_back(&a,nodo);
+		free_split(split);
+		i = 0;
 	}
 	if (ft_check_doubles(&a) == 0)
 	{

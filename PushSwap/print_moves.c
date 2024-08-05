@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 14:47:34 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 19:43:43 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/05 12:13:11 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,5 @@ void	sa(t_list **a)
 void	rra(t_list **a)
 {
 	write(1, "rra\n" , 4);
-	ft_revrotate(a);
-}
-
-void	rrb(t_list **b)
-{
-	write(1, "rrb\n" , 4);
-	ft_revrotate(b);
-}
-
-void	rrr(t_list **a, t_list **b)
-{
-	write(1, "rrr\n" , 4);
-	ft_revrotate(b);
 	ft_revrotate(a);
 }

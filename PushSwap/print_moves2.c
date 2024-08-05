@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_setpos.c                                        :+:      :+:    :+:   */
+/*   print_moves2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/29 18:50:25 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/05 14:35:14 by jvalle-d         ###   ########.fr       */
+/*   Created: 2024/08/05 12:13:14 by jvalle-d          #+#    #+#             */
+/*   Updated: 2024/08/05 12:13:37 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_setpos(t_list **lst)
+void	rrb(t_list **b)
 {
-	int			i;
-	t_list		*aux;
+	write(1, "rrb\n" , 4);
+	ft_revrotate(b);
+}
 
-	i = 1;
-	aux = *lst;
-	while (aux)
-	{
-		aux->pos = i++;
-		aux = aux->next;
-	}
+void	rrr(t_list **a, t_list **b)
+{
+	write(1, "rrr\n" , 4);
+	ft_revrotate(b);
+	ft_revrotate(a);
 }

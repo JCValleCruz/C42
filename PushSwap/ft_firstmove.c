@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:22:36 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/02 18:49:54 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/05 13:01:06 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_firstmove(t_list **a, t_list **b)
 {
-	int size;
-	int half;
-	t_list *aux;
+	int			size;
+	int			half;
+	t_list		*aux;
+
 	aux = *a;
 	size = ft_lstsize(*a);
 	half = size / 2;
-	if(size % 2 != 0)
+	if (size % 2 != 0)
 		half++;
 	while ((size > 3) && (half < size))
 	{
@@ -28,13 +29,13 @@ void	ft_firstmove(t_list **a, t_list **b)
 		{
 			pb(a, b);
 			size--;
-		}	
-		else 
+		}
+		else
 			ra(a);
 	}
 	while (size > 3)
 	{
 		pb(a, b);
 		size--;
-	}		
+	}
 }
