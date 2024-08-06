@@ -6,13 +6,13 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 13:59:29 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/05 12:16:44 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/06 12:10:02 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long long	ft_atoll(const char *str)
+long long	ft_atoll(const char *str, t_list **lst, char **split)
 {
 	long long	result;
 	int			sign;
@@ -27,12 +27,12 @@ long long	ft_atoll(const char *str)
 			sign = -1;
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*str)
 	{
 		if (*str < '0' || *str > '9')
 		{
-			write(STDERR_FILENO, "Error\n", 6);
-			exit (1);
+			free_split(split);
+			ft_print_error(lst);
 		}
 		result = result * 10 + (*str - '0');
 		str++;

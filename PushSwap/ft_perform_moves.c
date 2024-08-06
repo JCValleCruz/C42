@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 14:56:39 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/05 14:52:15 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/05 17:25:47 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ t_list	*ft_find_cheapest(t_list **lst)
 	int		totalcost;
 	int		cheap;
 	t_list	*temp;
-	t_list 	*result;
-	
+	t_list	*result;
+
 	temp = *lst;
 	result = *lst;
 	cheap = ft_abs(temp->costa) + ft_abs(temp->costb);
@@ -52,7 +52,7 @@ t_list	*ft_find_cheapest(t_list **lst)
 			cheap = totalcost;
 			result = temp;
 		}
-		temp = temp->next;		
+		temp = temp->next;
 	}
 	return (result);
 }

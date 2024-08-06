@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 19:01:33 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/05 13:04:46 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/06 12:20:20 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	ft_setindex(t_list **a)
 
 	tab = malloc(ft_lstsize(*a) * sizeof(int));
 	if (!tab)
+	{
+		free(tab);
 		return ;
+	}
 	i = 0;
 	aux = *a;
 	while (aux)
@@ -30,6 +33,7 @@ void	ft_setindex(t_list **a)
 	}
 	tab = ft_sort_int_tab (tab, i);
 	ft_putindex(a, tab, i);
+	free(tab);
 }
 
 int	*ft_sort_int_tab(int *tab, int size)

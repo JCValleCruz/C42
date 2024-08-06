@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:32:33 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/05 14:39:10 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/06 11:35:30 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_sort_three(t_list **a)
 
 	max = ft_max(a);
 	min = ft_min(a);
+	ft_setpos(a);
 	if (max->pos == 2)
 	{
 		rra(a);
