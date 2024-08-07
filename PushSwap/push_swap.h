@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 18:13:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/06 12:30:36 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/07 14:02:32 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,6 @@ typedef struct s_list
 t_list		*ft_lstnew(long long value);
 int			ft_lstsize(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
-//print utils (BORRAR!!!)
-void		ft_printlist(t_list **lst, char *c);
-void		ft_print_node(t_list *lst);
 //libft utils
 long long	ft_atoll(const char *str, t_list **lst, char **split);
 //Posición
@@ -96,7 +93,7 @@ void		free_split(char **split);
 void		ft_print_error(t_list **lst);
 //Main
 void		ft_push_swap(t_list *a, t_list *b);
-void		ft_core(int argc, char **argv, int arg_i, t_list **a, t_list *nodo);
-void		ft_free_stack (t_list **lst);
+void		ft_core(int argc, char **argv, int arg_i, t_list **a);
+void		ft_free_stack(t_list **lst);
 
 #endif

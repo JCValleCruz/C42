@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 19:30:09 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/06 12:11:24 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/07 14:03:35 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_free_stack(t_list **lst)
 {
 	t_list	*aux;
-		
+
 	while (*lst)
 	{
 		aux = (*lst)->next;
@@ -24,5 +24,3 @@ void	ft_free_stack(t_list **lst)
 	}
 	*lst = NULL;
 }
-
-

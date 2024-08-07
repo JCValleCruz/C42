@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 13:02:32 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/06 11:23:59 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/07 14:03:08 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,7 @@ void	ft_perform_mix(t_list **a, t_list **b, t_list *cheap)
 		rra(a);
 		timesa++;
 	}
-	while (timesb > 0)
-		ft_perform_mix2(a, b, cheap);
-	while (timesb < 0)
+	if (timesb)
 		ft_perform_mix2(a, b, cheap);
 	pa(b, a);
 }

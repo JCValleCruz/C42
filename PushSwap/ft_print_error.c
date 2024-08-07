@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 17:43:37 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/06 12:05:10 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/07 14:04:01 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,3 @@ void	ft_print_error(t_list **lst)
 	write(STDERR_FILENO, "Error\n", 6);
 	exit (1);
 }
-
-

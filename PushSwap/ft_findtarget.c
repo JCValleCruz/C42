@@ -6,7 +6,7 @@
 /*   By: jvalle-d <jvalle-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 11:58:13 by jvalle-d          #+#    #+#             */
-/*   Updated: 2024/08/06 11:37:12 by jvalle-d         ###   ########.fr       */
+/*   Updated: 2024/08/07 13:57:36 by jvalle-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	ft_settarget(t_list **a, t_list *nodob, int size)
 
 void	ft_settargetnext(t_list **a, t_list *nodob, int size)
 {
-	t_list	*aux;
+	t_list	*aux;							
 	int		i;
 
 	aux = *a;
